@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @version 1.0
  * 2023-05-11 4:29 PM
  */
-@Profile("func")
+@Profile(value = {"func","default"})
 @Component
 @ConfigurationProperties("person")
 public class Student implements Person{

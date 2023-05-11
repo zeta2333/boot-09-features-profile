@@ -19,8 +19,24 @@ public class HelloController {
     @Autowired
     private Person person;
 
+    @Value("${MAVEN_HOME}")
+    private String msg;
+
+    @Value("${os.name}")
+    private String osName;
+
     @GetMapping("/")
     public String getInfo() {
         return person.getClass().toGenericString();
+    }
+
+    @GetMapping("/person")
+    public Person getPerson(){
+        return person;
+    }
+
+    @GetMapping("/msg")
+    public String getMsg(){
+        return msg+"\n"+osName;
     }
 }
