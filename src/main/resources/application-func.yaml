@@ -1,0 +1,5 @@
+person:
+    name: func-张三
+    age: 21
+server:
+    port: 9000
